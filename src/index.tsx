@@ -1,6 +1,12 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 
 // Delete me
 export const Thing = () => {
-  return <div>Welcome to your first test package.</div>;
+  const [counter, updateCounter] = useState(0);
+  return (
+    <div>
+      <p>{counter}</p>
+      <button onClick={() => updateCounter(counter + 1)}>Increment</button>
+    </div>
+  );
 };
